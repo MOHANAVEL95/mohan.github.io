@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en" ng-app="app" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" ng-app="app" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" ng-app="app" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" ng-app="app"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>GoD'orky Search</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   <!--  <link rel="stylesheet" href="/css/app.css"> -->
+
+<style type="text/css">
+
+.container-fluid
+{
+
+    
+   /* height: 300px;*/
+   
+
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    margin: auto;
+
+}
+
+
+
+
+.header1{
+
+    font-size:40px;
+    color: white;
+    font-family: fantasy;
+
+}
+
+.full_body
+{
+    background-color: #543C7A;
+     font-size: 200%;
+}
+
+.search
+{
+    width: 80%;
+    height: 30%;
+    color: black;
+
+}
+
+.row
+{
+
+    
+
+}
+
+body div{
+    margin: auto;
+    color: white;
+}
+
+span
+{
+    font-size: 
+    vertical-align: -9%;
+    margin-left: 0.5%;
+
+}
+
+.blanktop
+{
+    height: 30%;
+}
+
+
+
+</style>
+<script>
+    (function() {
+    var cx = '017473001412499716694:e-wxzkrmjw4';
+    var gcse = document.createElement('script'); gcse.type = 'text/javascript'; gcse.async = true;
+    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//www.google.com/cse/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(gcse, s);
+})();
+</script>
+</head>
+
+<body class="full_body">
+<form id="formid" action="">
+    <div class="container-fluid">
+
+             <div class="blanktop"></div>
+
+            <div class="row">
+                <div class="col-md-2">
+                </div>
+                <div class="col-md-8 text-center">
+                    <span class="header1 "> GoD'orky  </span>
+                </div>
+            </div>
+
+            <br/>
+
+            <div class="row">
+
+                <div class="col-md-2">
+                </div>
+                <div class="col-md-8 text-center">
+                    <input type="Search" name="q" id="search" class="search">
+                </div>
+
+            </div>
+
+            <br/>
+
+            <div class="row radio-container ">
+                <div class="col-md-2">
+                </div>
+                <div class="col-md-1 ">
+                   
+                    
+                </div>
+
+                <div class="col-md-4 ">
+                <input type="hidden" id="hid" value="doc">
+                    <input type="radio" name="options" onClick="document.getElementById('hid').value='doc'" checked><span>Documents(.pdf,.doc,.docx,.ppt)</span>
+
+                </div>
+
+                <div class="col-md-4 ">
+
+                    <input type="radio" name="options" onClick="document.getElementById('hid').value='soft'" value="soft" ><span>Softwares</span>
+
+                </div>
+
+            </div>
+
+            <div class="row radio-container">
+                <div class="col-md-2">
+                </div>
+                <div class="col-md-1 ">
+                   
+                    
+                </div>
+
+                <div class="col-md-4 ">
+                
+                    <input type="radio" name="options" onClick="document.getElementById('hid').value='tor'"><span>Torrents</span>
+
+                </div>
+
+                <div class="col-md-4 ">
+                
+                    <input type="radio" name="options" onClick="document.getElementById('hid').value='song'"><span>Songs(.mp3)</span>
+
+                </div>
+
+                <!-- <div class="col-md-4 ">
+
+                    <input type="radio" name="options" onClick="document.getElementById('hid').value='soft'" value="soft" ><span>Softwares</span>
+
+                </div> -->
+
+            </div>
+
+            <center>
+            <span class="row">
+                <span class="col-md-12 "> 
+                    <button class="btn btn-info" onclick="changeLink();">Search</button>
+                </span>
+            </span>
+            </center>
+
+
+    </div>
+</form>
+
+<script>
+
+
+function changeLink()
+{
+	var lnk;
+if(document.getElementById("hid").value=='doc')
+{
+//alert("doc");
+lnk="/docsearch.html";
+}
+
+else if(document.getElementById("hid").value=='soft')
+
+{
+lnk="/exeresults.html";
+}
+
+else if(document.getElementById("hid").value=='tor')
+{
+    lnk="/torrentsearch.html"
+}
+
+else 
+{
+    lnk="/songsearch.html"
+}
+
+document.getElementById('formid').action = lnk;
+
+}
+
+
+
+</script>
+
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/controller.js"></script>
+<link rel="stylesheet" href="css/bootstrap.min.css">
+
+</body>
+</html>
